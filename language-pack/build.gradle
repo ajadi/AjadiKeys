@@ -1,0 +1,48 @@
+plugins { id 'com.android.application' }
+
+// Separately installable, data-only language packs. One source corpus, three isolated APKs.
+abstract class PrepareLanguageAssets extends DefaultTask {
+    @InputDirectory abstract DirectoryProperty getWords()
+    @Input abstract Property<String> getLanguage()
+    @OutputDirectory abstract DirectoryProperty getOutputDirectory()
+    @TaskAction void prepare() {
+        def lang = language.get()
+        def source = words.get().asFile
+        def destination = outputDirectory.get().asFile
+        project.sync {
+            into destination
+            into('words') {
+                from(source) { include "${lang}.tsv", "${lang}.akn", "${lang}.morph.tsv", "${lang}.akp", 'ATTRIBUTION.txt' }
+            }
+        }
+        def contexts = new File(destination, 'words/contexts.tsv')
+        contexts.setText(new File(source, 'contexts.tsv').readLines('UTF-8')
+            .findAll { it.startsWith(lang.toUpperCase(Locale.ROOT) + '\t') }.join('\n') + '\n', 'UTF-8')
+    }
+}
+android {
+    namespace 'com.ajadi.keys.language'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'com.ajadi.keys.language'
+        minSdk 26
+        targetSdk 35
+    }
+    flavorDimensions 'language'
+    productFlavors {
+        ru { dimension 'language'; applicationIdSuffix '.ru'; versionCode 2; versionName '1.1.0'; manifestPlaceholders = [packLanguage:'ru', packLabel:'Ajadi Keys — Русский'] }
+        en { dimension 'language'; applicationIdSuffix '.en'; versionCode 1; versionName '1.0.0'; manifestPlaceholders = [packLanguage:'en', packLabel:'Ajadi Keys — English'] }
+        he { dimension 'language'; applicationIdSuffix '.he'; versionCode 1; versionName '1.0.0'; manifestPlaceholders = [packLanguage:'he', packLabel:'Ajadi Keys — עברית'] }
+    }
+}
+androidComponents {
+    onVariants(selector().all()) { variant ->
+        def lang = variant.productFlavors.find { it.first == 'language' }.second
+        def task = tasks.register("prepare${variant.name.capitalize()}LanguageAssets", PrepareLanguageAssets) {
+            words.set(rootProject.layout.projectDirectory.dir('language-data/words'))
+            language.set(lang)
+            outputDirectory.set(layout.buildDirectory.dir("generated/languageAssets/${variant.name}"))
+        }
+        variant.sources.assets.addGeneratedSourceDirectory(task) { it.outputDirectory }
+    }
+}

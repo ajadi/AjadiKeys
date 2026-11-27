@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Ajadi Keys</string>
+    <string name="compact_width_percent">Ширина: %1$d%%</string>
+    <style name="AppTheme" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">#78DBAF</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">#111923</item>
+        <item name="android:navigationBarColor">#111923</item>
+    </style>
+</resources>

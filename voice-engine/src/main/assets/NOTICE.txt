@@ -1,0 +1,1 @@
+Whisper.cpp v1.7.6 (a8d002cfd879315632a579e73f0148d06959de36), MIT. https://github.com/ggml-org/whisper.cpp

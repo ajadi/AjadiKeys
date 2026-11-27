@@ -1,0 +1,13 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="com.ajadi.keys.permission.LOCAL_ENGINE"/>
+    <queries>
+        <package android:name="com.ajadi.keys"/>
+        <provider android:authorities="com.ajadi.keys.models"/>
+    </queries>
+    <application android:label="Ajadi Keys Translation Engine" android:allowBackup="false" android:fullBackupContent="false" android:supportsRtl="true">
+        <service android:name="com.ajadi.keys.TranslationService" android:exported="true"
+            android:permission="com.ajadi.keys.permission.LOCAL_ENGINE">
+            <meta-data android:name="com.ajadi.keys.ENGINE_PROTOCOL" android:value="1"/>
+        </service>
+    </application>
+</manifest>

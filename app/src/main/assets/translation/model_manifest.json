@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "pairs": [
+    "en-ru",
+    "ru-en",
+    "en-he",
+    "he-en"
+  ],
+  "entries": [
+    {
+      "name": "en-ru/encoder.onnx",
+      "size": 51628446,
+      "sha256": "97f28d8295d231b7da721ded06fa8c034787df2122cd8f85b904abdc4d15bd53"
+    },
+    {
+      "name": "en-ru/decoder.onnx",
+      "size": 58931576,
+      "sha256": "7efefcd793a5663bc204224a92a123524f3dfe2ffad59e5f73d6734d1b11ad04"
+    },
+    {
+      "name": "en-ru/tokenizer.bin",
+      "size": 1739448,
+      "sha256": "5385e3560bca9af7069549d563f8b98546cc12dcde7b39bf4d6fbd5ffff6291c"
+    },
+    {
+      "name": "ru-en/encoder.onnx",
+      "size": 51628446,
+      "sha256": "c10df0466540534bb70c4402d539c349b8bfa9968184cad89f51408cf13e7eb7"
+    },
+    {
+      "name": "ru-en/decoder.onnx",
+      "size": 58931576,
+      "sha256": "25e7ff97b201bce64ab9c39749761d657b70b8602bcbc1ce01c67f713e90ffdf"
+    },
+    {
+      "name": "ru-en/tokenizer.bin",
+      "size": 2016836,
+      "sha256": "8239e5fb972af81d40ae8db4d05f84c589aa5db4df56fac30fb689076dedaab6"
+    },
+    {
+      "name": "en-he/encoder.onnx",
+      "size": 53328797,
+      "sha256": "cea8f074108e868a12e54a1cb3c6f5611a1b449eef80457b96d82505fdc22075"
+    },
+    {
+      "name": "en-he/decoder.onnx",
+      "size": 94685386,
+      "sha256": "415d252a7d625525d61789bb095769d41b5b53f237d5dc67284cff65e5cdf26e"
+    },
+    {
+      "name": "en-he/tokenizer.bin",
+      "size": 1583141,
+      "sha256": "caebfa700a5dfff4b6ac21533f200f6d7647d310ee654488ac4bf4bc16a782b1"
+    },
+    {
+      "name": "he-en/encoder.onnx",
+      "size": 138789694,
+      "sha256": "af11fb99e5f7663b58d3d70adb6c10bbc7b60d785e7d3d3dc88bab2463c4deec"
+    },
+    {
+      "name": "he-en/decoder.onnx",
+      "size": 226746662,
+      "sha256": "53e384b73104fa9c4592eae75754d12d844150a2d4b720ab7d08a88de7a60006"
+    },
+    {
+      "name": "he-en/tokenizer.bin",
+      "size": 1592398,
+      "sha256": "a2710510ac5a792c0de7f5d0b534a1ae0db2da2cbba33db8aa6a4f05e3f5e93d"
+    },
+    {
+      "name": "MODEL-LICENSES.txt",
+      "size": 1582,
+      "sha256": "e4b76a17c46f7305a061acaefb6cc1c3c61af5c67cc48402bead18155e55beca"
+    },
+    {
+      "name": "APACHE-2.0.txt",
+      "size": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    }
+  ],
+  "source": {
+    "en-ru": {
+      "repo": "Xenova/opus-mt-en-ru",
+      "revision": "e050376e960175e8ddc5cff85025dc8436cddd68",
+      "base": "Helsinki-NLP/opus-mt-en-ru",
+      "base_revision": "bb09c99d180016eac6819df3dae68edb1690fdee",
+      "license": "apache-2.0"
+    },
+    "ru-en": {
+      "repo": "Xenova/opus-mt-ru-en",
+      "revision": "afe8c6c738ec81b6d033fd8f44f9678a639a7c67",
+      "base": "Helsinki-NLP/opus-mt-ru-en",
+      "base_revision": "fbd6dc73284f95536648512cc21d57f19191961a",
+      "license": "cc-by-4.0"
+    },
+    "en-he": {
+      "repo": "fintutto/opus-mt-en-he",
+      "revision": "bf377d21c2aefc17981607c2ce1047db37381f72",
+      "base": "Helsinki-NLP/opus-mt-en-he",
+      "base_revision": "b3df900afbb13bc343b0d28a03ac6f7990091f54",
+      "license": "apache-2.0"
+    },
+    "he-en": {
+      "repo": "wlwatkins/opus-mt-tc-big-he-en",
+      "revision": "d80dfa09db3fcc30220f3fee1e7025e4dcb82506",
+      "base": "Helsinki-NLP/opus-mt-tc-big-he-en",
+      "base_revision": "134c5a850dcaa763eec85bd1f4eb25112fecedbb",
+      "license": "cc-by-4.0"
+    }
+  }
+}

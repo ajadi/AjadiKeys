@@ -1,0 +1,5 @@
+Emoji keyword annotations extracted from Unicode CLDR release-47, English and Russian, subset of the keyboard emoji inventory. Combined annotations, lowercased. Unicode License as included.
+https://raw.githubusercontent.com/unicode-org/cldr/release-47/common/annotations/en.xml
+https://raw.githubusercontent.com/unicode-org/cldr/release-47/common/annotationsDerived/en.xml
+https://raw.githubusercontent.com/unicode-org/cldr/release-47/common/annotations/ru.xml
+https://raw.githubusercontent.com/unicode-org/cldr/release-47/common/annotationsDerived/ru.xml

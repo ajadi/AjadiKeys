@@ -1,0 +1,39 @@
+FrequencyWords 2018 lists, Hermit Dave, derived from OpenSubtitles2018.
+Original dataset: https://github.com/hermitdave/FrequencyWords/tree/525f9b560de45753a5ea01069454e72e9aa541c6/content/2018
+License for content: Creative Commons Attribution-ShareAlike 4.0 International (https://creativecommons.org/licenses/by-sa/4.0/).
+Ajadi Keys extracted up to 25000 high-frequency Russian tokens and up to 12000 English/Hebrew tokens, with language-script and token-format validation, NFC/lowercasing and tab-separated frequency counts. The adapted .tsv files remain CC BY-SA 4.0. No content censorship and no code from the upstream project.
+
+
+Ajadi Keys context tables (*.akn), 0.9.0:
+Derived aggregate word and adjacent word-pair/triple counts from Tatoeba contributors,
+https://tatoeba.org/en/downloads and https://downloads.tatoeba.org/exports/per_language/
+snapshot 2026-11-21, CC BY 2.0 FR (https://creativecommons.org/licenses/by/2.0/fr/).
+Vocabulary includes the existing FrequencyWords data above; the derived context
+tables are distributed under CC BY-SA 4.0. No original sentences are shipped.
+The tables were pruned, encoded as compact integer counts and indexed; see
+qa/prediction/sources.json for source URLs and checksums and scripts/build_prediction_data.py.
+
+Russian morphological tags and protection filter (ru.morph.tsv, ru.akp):
+Derived from the OpenCorpora morphological dictionary (https://opencorpora.org/,
+CC BY-SA 3.0, https://creativecommons.org/licenses/by-sa/3.0/), as packaged in
+pymorphy3-dicts-ru 2.4.417150.4580142. The build-time analyzer pymorphy3 2.0.6
+is MIT; it does not ship in the Android APK. The Russian tag/protection data
+are distributed CC BY-SA 3.0. The filter includes known OpenCorpora forms of
+common lemmas plus validated forms observed in the training partition.
+
+English/Hebrew morphology and protection filters:
+Derived from Universal Dependencies r2.17, English EWT, Hebrew IAHLTwiki and
+Hebrew IAHLTknesset, all CC BY-SA 4.0:
+https://universaldependencies.org/treebanks/en_ewt/
+https://universaldependencies.org/treebanks/he_iahltwiki/
+https://universaldependencies.org/treebanks/he_iahltknesset/
+Credit the treebank authors and contributors listed on those pages.
+English EWT: Natalia Silveira, Timothy Dozat, Christopher Manning, Sebastian
+Schuster, Ethan Chi, John Bauer, Miriam Connor, Marie-Catherine de Marneffe,
+Nathan Schneider, Sam Bowman, Hanzhi Zhu and Daniel Galbraith.
+Hebrew IAHLT: Amir Zeldes, Avner Algom, Noam Ordan, Yifat Ben Moshe, Shira
+Wigderson and fellow IAHLT contributors. See Zeldes et al. (2022), A Second
+Wave of UD Hebrew Treebanking and Cross-Domain Parsing.
+Only aggregate word-form tags and safe-side membership bits are included;
+original treebank text and annotations are not bundled. Derived EN/HE
+morphology and membership assets are CC BY-SA 4.0.

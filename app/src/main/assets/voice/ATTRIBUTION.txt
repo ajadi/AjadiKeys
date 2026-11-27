@@ -1,0 +1,3 @@
+Whisper model weights: OpenAI Whisper (MIT), https://github.com/openai/whisper
+Quantized ggml models: https://huggingface.co/ggerganov/whisper.cpp/tree/5359861c739e955e79d9a303bcbc70fb988958b1
+Whisper.cpp runtime v1.7.6, a8d002cfd879315632a579e73f0148d06959de36 (MIT), https://github.com/ggml-org/whisper.cpp

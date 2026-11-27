@@ -1,0 +1,4 @@
+# Keep pinned grammar asset bytes identical on Windows and Linux.
+language-data/words/*.morph.tsv text eol=lf
+language-data/words/??.tsv text eol=crlf
+language-data/words/contexts.tsv text eol=crlf

@@ -1,0 +1,7 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application android:label="${packLabel}" android:hasCode="false" android:allowBackup="false"
+        android:fullBackupContent="false" android:supportsRtl="true">
+        <meta-data android:name="com.ajadi.keys.LANGUAGE_PROTOCOL" android:value="1"/>
+        <meta-data android:name="com.ajadi.keys.LANGUAGE_ID" android:value="${packLanguage}"/>
+    </application>
+</manifest>
